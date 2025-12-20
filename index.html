@@ -10,13 +10,7 @@
 
 .animate {
   opacity: 0;
-  transform: translateY(40px);
   transition: all 0.8s ease-out;
-}
-
-.animate.show {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .from-right {
@@ -27,8 +21,17 @@
   transform: translateX(-60px);
 }
 
+.from-bottom {
+  transform: translateY(40px);
+}
+
 .scale {
   transform: scale(0.92);
+}
+
+.animate.show {
+  opacity: 1;
+  transform: translateX(0) translateY(0) scale(1);
 }
 
 img.animate,
@@ -328,6 +331,21 @@ section, .card, header, footer, .container{
 function toggleMenu(){
   document.querySelector('.main-nav').classList.toggle('show');
 }
+</script>
+<script>
+  const elements = document.querySelectorAll('.animate');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  elements.forEach(el => observer.observe(el));
 </script>
 
 </body>
