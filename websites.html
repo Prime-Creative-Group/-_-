@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>Websites</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #000;
+      color: #fff;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 30px 0;
+    }
+
+    .back-btn {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      background: rgba(0,0,0,0.7);
+      color: #fff;
+      border: none;
+      padding: 12px 18px;
+      font-size: 16px;
+      border-radius: 10px;
+      cursor: pointer;
+      z-index: 9999;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.08);
+      border-radius: 18px;
+      overflow: hidden;
+      transition: transform 0.4s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      padding: 15px;
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+<button class="back-btn" onclick="history.back()">← Back</button>
+
+<h1>🌐 مواقع</h1>
+
+<div class="container">
+  <div class="grid">
+
+    <div class="card">
+      <img src="site1.jpg" alt="">
+      <h3>موقع شركة</h3>
+    </div>
+
+    <div class="card">
+      <img src="site2.jpg" alt="">
+      <h3>Landing Page</h3>
+    </div>
+
+    <div class="card">
+      <img src="site3.jpg" alt="">
+      <h3>متجر إلكتروني</h3>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
