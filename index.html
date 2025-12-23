@@ -7,18 +7,6 @@
 <meta name="google-site-verification" content="JwdSMzm-Lq6012BYc956Chr4Q2UCBb0us2IbydDMTpk" />
 <title>Prime Creative Group</title>
 <style>
-  body {
-  background-image: url("bg.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-@media (max-width: 768px) {
-  body {
-    background-attachment: scroll;
-  }
-}
 
   .categories-grid {
   display: grid;
@@ -184,10 +172,16 @@ video.animate {
     input,textarea{padding:10px;border:1px solid #ddd;border-radius:8px;width:100%}
     button{padding:10px 14px;border-radius:8px;border:0;background:var(--accent);color:#fff}
 
-body{
-background:url('gray.jpg') no-repeat center center fixed;
-background-size:cover;
+body {
+  background: url('gray.jpg') no-repeat center center;
+  background-size: cover;
 }
+  @media (min-width: 769px) {
+  body {
+    background-attachment: fixed;
+  }
+}
+
 
 body, h1, h2, h3, h4, h5, h6, p, a, div, span{
 color:#fff !important;
